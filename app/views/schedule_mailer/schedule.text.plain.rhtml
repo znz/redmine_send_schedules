@@ -1,0 +1,7 @@
+<%= l(:mail_body_schedule, @issues.size, @days) %>:
+
+<% @issues.each do |issue| -%>
+* <%= "##{issue.id} #{issue.due_date}: #{issue.subject} (#{issue.assigned_to})" %>
+<% end -%>
+
+<%= @issues_url %>
