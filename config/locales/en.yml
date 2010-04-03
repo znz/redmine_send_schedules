@@ -1,0 +1,3 @@
+en:
+  mail_subject_schedule: "{{count}} schedule(s) due in the next days"
+  mail_body_schedule: "{{count}} schedule(s) due in the next {{days}} days"
