@@ -6,9 +6,10 @@ Available options:
   * days     => number of days to remind about (defaults to 7)
   * tracker  => id of tracker (defaults to all trackers)
   * project  => id or identifier of project (defaults to all projects)
+  * language => "en" or "ja"
 
 Example:
-  rake redmine:send_schedules recipients=you@example.com days=7 RAILS_ENV="production"
+  rake redmine:send_schedules recipients=you@example.com days=7 RAILS_ENV="production" language=ja
 END_DESC
 
 namespace :redmine do
@@ -18,7 +19,8 @@ namespace :redmine do
     options[:days] = ENV['days'].to_i if ENV['days']
     options[:project] = ENV['project'] if ENV['project']
     options[:tracker] = ENV['tracker'].to_i if ENV['tracker']
-    
+    options[:language] = ENV['language'] if ENV['language']
+
     ScheduleMailer.schedules(options)
   end
 end
