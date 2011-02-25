@@ -2,7 +2,7 @@ class ScheduleMailer < Mailer
   def schedule(recipients, project, issues, days, language)
     set_language_if_valid language
     recipients recipients
-    subject l(:mail_subject_schedule, issues.size)
+    subject l(:mail_subject_schedule, :count => issues.size, :days => days)
     body :issues => issues,
          :days => days,
          :issues_url => url_for(:controller => 'issues', :action => 'calendar', :project_id => project)

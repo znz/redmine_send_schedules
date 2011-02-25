@@ -1,3 +1,3 @@
 ja:
-  mail_subject_schedule: "{{count}}件のスケジュールが期日間近です"
-  mail_body_schedule: "{{count}}件のスケジュールの期日が{{days}}日以内に到来します"
+  mail_subject_schedule: "%{count}件のスケジュールの期日が%{days}日以内に到来します"
+  mail_body_schedule: "%{count}件のスケジュールの期日が%{days}日以内に到来します"
